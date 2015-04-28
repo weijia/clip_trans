@@ -39,6 +39,13 @@
          <string/>
         </property>
        </widget>
+       <widget class="QWidget" name="verticalLayoutWidget">
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QTextEdit" name="textEdit_4"/>
+         </item>
+        </layout>
+       </widget>
       </widget>
       <widget class="QSplitter" name="splitter">
        <property name="orientation">

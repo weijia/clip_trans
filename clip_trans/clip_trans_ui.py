@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'libs\services\external_app\clip_trans.ui'
+# Form implementation generated from reading ui file 'clip_trans.ui'
 #
-# Created: Tue Aug 26 21:44:07 2014
-#      by: PyQt4 UI code generator 4.10.3
+# Created: Wed Apr 29 07:37:36 2015
+#      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -44,6 +44,14 @@ class Ui_MainWindow(object):
         self.textEdit.setToolTip(_fromUtf8(""))
         self.textEdit.setWhatsThis(_fromUtf8(""))
         self.textEdit.setObjectName(_fromUtf8("textEdit"))
+        self.verticalLayoutWidget = QtGui.QWidget(self.splitter_2)
+        self.verticalLayoutWidget.setObjectName(_fromUtf8("verticalLayoutWidget"))
+        self.verticalLayout = QtGui.QVBoxLayout(self.verticalLayoutWidget)
+        self.verticalLayout.setMargin(0)
+        self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
+        self.textEdit_4 = QtGui.QTextEdit(self.verticalLayoutWidget)
+        self.textEdit_4.setObjectName(_fromUtf8("textEdit_4"))
+        self.verticalLayout.addWidget(self.textEdit_4)
         self.splitter = QtGui.QSplitter(self.splitter_3)
         self.splitter.setOrientation(QtCore.Qt.Horizontal)
         self.splitter.setObjectName(_fromUtf8("splitter"))

@@ -56,11 +56,16 @@ class ClipManagerApp(object):
         x = source_text
         y = None
         t = None
-        exec script_text
-        #print y
-        if y is None:
-            y = '\n'.join(yl)
+        self.ui.textEdit_4.setText("")
+        try:
+            exec script_text
             #print y
+            if y is None:
+                y = '\n'.join(yl)
+                #print y
+        except:
+            import traceback
+            self.ui.textEdit_4.setText(traceback.format_exc())
         self.ui.textEdit_3.setText(y)
 
         """
