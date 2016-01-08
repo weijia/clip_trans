@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from PyQt4 import QtCore
-#TODO: Find a more elegant way to import Ui_MainWindow
+
+# TODO: Find a more elegant way to import Ui_MainWindow
 try:
     from clip_trans_ui import Ui_MainWindow
 except:
@@ -29,7 +30,7 @@ class ClipManagerApp(object):
 #for i in xl:
 #    yl.append(i+"i")
 """
-        )
+                                 )
         self.window.show()
         sys.exit(app.exec_())
 
@@ -46,23 +47,26 @@ class ClipManagerApp(object):
     def on_exit(self):
         self.window.close()
 
+    def get_input_text(self):
+        return unicode(self.ui.textEdit_2.text())
+
     def on_execute(self):
         script_text = str(self.ui.textEdit.text())
         # print 'script is:',script_text
-        source_text = str(self.ui.textEdit_2.text())
+        source_text = self.get_input_text()
         source_text = source_text.replace('\r', '')
         xl = source_text.split('\n')
-        #Set source text to x so script can use x as source text as well
+        # Set source text to x so script can use x as source text as well
         x = source_text
         y = None
         t = None
         self.ui.textEdit_4.setText("")
         try:
             exec script_text
-            #print y
+            # print y
             if y is None:
                 y = '\n'.join(yl)
-                #print y
+                # print y
         except:
             import traceback
             self.ui.textEdit_4.setText(traceback.format_exc())
